@@ -1,0 +1,23 @@
+.movieInfos{
+    div{
+        width: 100%;
+        max-width: 800px;
+        div{
+            display: flex;
+            align-items: center;
+            h3{
+                margin-right: 8px;
+            }
+        }
+
+        p, h2, h3{
+            text-align: start;
+        }
+    }
+
+    img{
+        max-width: 300px;
+        width: 100%;
+    }
+    
+}

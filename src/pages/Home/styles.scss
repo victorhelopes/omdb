@@ -1,0 +1,16 @@
+.Home{
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.body{
+  text-align: center;
+  padding: 8px;
+}
+
+.search{
+  width: 100%;
+  max-width: 500px;
+}

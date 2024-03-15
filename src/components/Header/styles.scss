@@ -1,0 +1,19 @@
+header{
+    box-shadow: 0px 0px 5px black;
+    background-color: white;
+}
+
+.Favorites{
+    background-color: white;
+    width: fit-content;
+    height: fit-content;
+    position: absolute;
+    box-shadow: 0px 0px 5px black;
+    padding: 8px;
+    border-radius: 8px;
+
+    div {
+        cursor: pointer;
+        width: fit-content;
+    }
+}
