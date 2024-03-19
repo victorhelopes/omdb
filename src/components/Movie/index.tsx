@@ -1,11 +1,14 @@
-import Button from 'react-bootstrap/Button'
 import './styles.scss'
 
-export function MovieInfos({info}){
+import { IMovieInterface } from './movieInfos.interface';
+import { Button } from '@ui5/webcomponents-react';
+
+export function MovieInfos({info}: IMovieInterface){
     function addFavorite(){
         const data = localStorage.getItem('favorites');
+        if(!data) return;
         let array = JSON.parse(data)
-        if(array && !array.find((infoArray)=>{return infoArray=== info.Title})){
+        if(array && !array.find((infoArray: string)=>{return infoArray === info.Title})){
             array.push(info.Title)
         }
         if(array === null)
@@ -28,7 +31,7 @@ export function MovieInfos({info}){
                         <p>{info?.Ratings[0]?.Value || 'No rating'}</p>
                     </div>
                     <div>
-                        <Button variant="secondary" size='lg' onClick={addFavorite}>Favorite</Button>
+                        <Button onClick={addFavorite}>Favorite</Button>
                     </div>
                 </div>
                 <img 
